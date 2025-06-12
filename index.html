@@ -88,12 +88,15 @@
     nav {
       display: flex;
       gap: 1.5rem;
+      margin-left: auto;
+      margin-right: 2rem;
     }
 
     nav a {
       color: var(--svarto-yellow);
       text-decoration: none;
       font-weight: bold;
+      white-space: nowrap;
     }
 
     .hero {
@@ -261,7 +264,6 @@
     .header-controls {
       display: flex;
       align-items: center;
-      gap: 1rem;
     }
 
     .theme-toggle {
@@ -318,6 +320,7 @@
         width: 100%;
         padding: 1rem;
         z-index: 1000;
+        margin: 0;
       }
 
       nav.show {
@@ -385,13 +388,13 @@
       const savedTheme = localStorage.getItem('theme');
       const themeToggle = document.querySelector('.theme-toggle');
       
-      if (savedTheme === 'light') {
-        document.documentElement.removeAttribute('data-theme');
-        themeToggle.textContent = '🌙';
-      } else {
+      if (savedTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
         themeToggle.textContent = '☀️';
-        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        themeToggle.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
       }
     });
   </script>
@@ -403,8 +406,8 @@
     <h1>Svarto Solutions</h1>
     <nav>
       <a href="#about">Մեր մասին</a>
-      <a href="#services">ծառայություններ</a>
-      <a href="#projects">Նախագծեր</a>
+      <a href="#services">Ծառայություններ</a>
+      <a href="#projects">Կայքեր</a>
       <a href="#contact">Կապ</a>
     </nav>
     <div class="header-controls">
