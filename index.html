@@ -2,6 +2,15 @@
 <html lang="hy" data-theme="dark">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNG81SRCR0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-MNG81SRCR0');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
@@ -57,6 +66,7 @@
     [id] {
       scroll-margin-top: 80px;
     }
+
     html {
       scroll-behavior: smooth;
     }
@@ -460,7 +470,7 @@
     function toggleTheme() {
       const html = document.documentElement;
       const themeToggle = document.querySelector('.theme-toggle');
-      
+
       if (html.getAttribute('data-theme') === 'dark') {
         html.removeAttribute('data-theme');
         themeToggle.textContent = '🌙';
@@ -476,7 +486,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       const savedTheme = localStorage.getItem('theme');
       const themeToggle = document.querySelector('.theme-toggle');
-      
+
       if (savedTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
         themeToggle.textContent = '☀️';
@@ -490,7 +500,7 @@
     // Number animation function
     function animateNumbers() {
       const numbers = document.querySelectorAll('.experience-number span[data-target]');
-      
+
       numbers.forEach(number => {
         const target = parseInt(number.getAttribute('data-target'));
         const duration = 2000; // 2 seconds
@@ -634,7 +644,8 @@
     <section id="about">
       <div class="about-box">
         <h3>Մեր Մասին</h3>
-        <p><b>Svarto Solutions-ը</b> մասնագիտացած է <b>Վեբ կայքերի</b> պատրաստման և <b>SMM</b> ծառայությունների մատուցման մեջ։
+        <p><b>Svarto Solutions-ը</b> մասնագիտացած է <b>Վեբ կայքերի</b> պատրաստման և <b>SMM</b> ծառայությունների
+          մատուցման մեջ։
           Մենք հավատում ենք, որ յուրաքանչյուր բիզնես պետք է ունենա արագ ու պարզ կայք՝ վստահելի և ներկայանալի դառնալու
           համար։
           Մեր առաքելությունն է <b>տեխնոլոգիաների միջոցով աջակցել հայաստանյան
